@@ -25,8 +25,8 @@
 
 % \setmainfont{TeX Gyre Pagella}
 
-\RequirePackage{newpxtext, textcomp, eulerpx}
 \RequirePackage{lmodern}
+\RequirePackage{newpxtext, textcomp, eulerpx}
 
 
 
