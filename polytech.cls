@@ -61,6 +61,17 @@
 \RequirePackage{tikz}
 
 
+%% Table of contents
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
 %% Chemical
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{chemfig}
