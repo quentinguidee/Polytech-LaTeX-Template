@@ -98,7 +98,7 @@
     \end{hyphenrules}
 
     \vfill
-    {\fontsize{12}{20}\serialfont\selectfont \color{color_lightgray}{AUTEUR} \par }
+    {\fontsize{12}{20}\serialfont\selectfont \color{color_lightgray}{AUTEUR(S)} \par }
     {\fontsize{19}{20}\serialfont\selectfont \color{color_darkgray}{\@author} \par }
     \vspace{1cm}
     {\fontsize{12}{20}\serialfont\selectfont \color{color_lightgray}{PROFESSEUR} \par }
@@ -185,6 +185,23 @@
     before skip=4mm,
     after skip=4mm,
     title=\color{black}Remarque}
+
+\newtcolorbox{rappel}{
+    breakable,
+    colback=black!4,
+    colframe=black!4,
+    fonttitle=\bfseries,
+    sharp corners=all,
+    toptitle=2mm,
+    bottomtitle=1mm,
+    boxrule=0mm,
+    %bottomrule=.25mm,
+    subtitle style={
+        colback=black!7
+    },
+    before skip=4mm,
+    after skip=4mm,
+    title=\color{black}Rappel}
 
 
 % Color Box
