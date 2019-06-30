@@ -169,6 +169,23 @@
     before skip=4mm,
     after skip=4mm}
 
+\newtcolorbox{remarque}{
+    breakable,
+    colback=black!4,
+    colframe=black!4,
+    fonttitle=\bfseries,
+    sharp corners=all,
+    toptitle=2mm,
+    bottomtitle=1mm,
+    boxrule=0mm,
+    %bottomrule=.25mm,
+    subtitle style={
+        colback=black!7
+    },
+    before skip=4mm,
+    after skip=4mm,
+    title=\color{black}Remarque}
+
 
 % Color Box
 \RequirePackage{multicol}
