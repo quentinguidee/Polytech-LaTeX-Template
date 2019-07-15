@@ -9,6 +9,8 @@
 \RequirePackage[french]{babel}
 
 %% Fonts
+
+\RequirePackage{amsmath,amsfonts}
 \RequirePackage{fontspec}
 \RequirePackage{tcolorbox, xcolor, color}
 \tcbuselibrary{breakable}
@@ -81,9 +83,9 @@
 
 \newtoks\course
 \newtoks\prof
+\newtoks\maincolor
 \course{XXXXH-0000}
-
-
+\maincolor{color_purple}
 
 
 \renewcommand{\maketitle}{
@@ -94,7 +96,7 @@
     \vspace{0.7cm}
     
     \begin{hyphenrules}{nohyphenation}
-    {\fontsize{60}{20}\serialfont\selectfont \color{color_purple}{\@title} \par }
+    {\fontsize{60}{20}\serialfont\selectfont \color{\the\maincolor}{\@title} \par }
     \end{hyphenrules}
 
     \vfill
@@ -107,7 +109,7 @@
 }
 
 \titleformat{\chapter}[display]
-    {\color{color_purple} \fontsize{42}{20}\serialfont\selectfont}%
+    {\color{\the\maincolor} \fontsize{42}{20}\serialfont\selectfont}%
     {\fontsize{20}{60}\selectfont\color{black} %
     {\chaptertitlename}\hspace{1ex}%
     {\thechapter}}%
@@ -203,6 +205,21 @@
     after skip=4mm,
     title=\color{black}Rappel}
 
+
+\newtcolorbox{property}[1]{
+    breakable,
+    colback=black!4,
+    colframe=black!4,
+    fonttitle=\bfseries,
+    sharp corners=all,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    boxrule=0mm,
+    %bottomrule=.25mm,
+    before skip=4mm,
+    after skip=4mm,
+    after title={\hfill\colorbox{black}{\color{white}\textsc{Propriété}}},
+    title=\color{black}#1}
 
 % Color Box
 \RequirePackage{multicol}
