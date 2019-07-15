@@ -221,6 +221,21 @@
     after title={\hfill\colorbox{black}{\color{white}\textsc{Propriété}}},
     title=\color{black}#1}
 
+\newtcolorbox{theoreme}[1]{
+    breakable,
+    colback=black!4,
+    colframe=black!4,
+    fonttitle=\bfseries,
+    sharp corners=all,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    boxrule=0mm,
+    %bottomrule=.25mm,
+    before skip=4mm,
+    after skip=4mm,
+    after title={\hfill\colorbox{color_teal}{\color{white}\textsc{Théorème}}},
+    title=\color{black}#1}
+
 % Color Box
 \RequirePackage{multicol}
 \newcommand{\cbox}[1]{\raisebox{\depth}{\fcolorbox{black}{#1}{\null}}}
