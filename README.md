@@ -6,6 +6,12 @@ To use this template, you have to install the free [Jaapokki font](https://mikko
 
 ## Colors
 
+To change the main color
+
+```
+\maincolor{color_xxx}
+```
+
 ![colors](https://github.com/quentinguidee/Polytech-LaTeX-Template/blob/master/imgs/Colors.png)
 
 ## Screenshot
