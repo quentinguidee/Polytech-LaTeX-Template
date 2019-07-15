@@ -12,7 +12,7 @@ To change the main color
 \maincolor{color_xxx}
 ```
 
-![colors](https://github.com/quentinguidee/Polytech-LaTeX-Template/blob/master/imgs/Colors.png)
+![colors](https://github.com/quentinguidee/Polytech-LaTeX-Template/blob/master/imgs/colors.png)
 
 ## Screenshot
 
