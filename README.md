@@ -6,7 +6,7 @@ To use this template, you have to install the free [Jaapokki font](https://mikko
 
 ## Colors
 
-![colors](https://raw.githubusercontent.com/quentinguidee/Polytech-LaTeX-Template/imgs/Colors.png)
+![colors](https://github.com/quentinguidee/quentinguidee/Polytech-LaTeX-Template/imgs/Colors.png)
 
 ## Screenshot
 
