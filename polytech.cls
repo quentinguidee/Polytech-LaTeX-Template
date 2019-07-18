@@ -156,7 +156,7 @@
     title=\color{black}Exemple}
 
 \newtcolorbox{tbox}{
-    breakable,
+    %breakable,
     colback=black!4,
     colframe=black!4,
     fonttitle=\bfseries,
@@ -172,7 +172,7 @@
     after skip=4mm}
 
 \newtcolorbox{remarque}{
-    breakable,
+    %breakable,
     colback=black!4,
     colframe=black!4,
     fonttitle=\bfseries,
@@ -189,7 +189,7 @@
     title=\color{black}Remarque}
 
 \newtcolorbox{rappel}{
-    breakable,
+    %breakable,
     colback=black!4,
     colframe=black!4,
     fonttitle=\bfseries,
@@ -207,7 +207,7 @@
 
 
 \newtcolorbox{property}[1]{
-    breakable,
+    %breakable,
     colback=black!4,
     colframe=black!4,
     fonttitle=\bfseries,
@@ -218,11 +218,11 @@
     %bottomrule=.25mm,
     before skip=4mm,
     after skip=4mm,
-    after title={\hfill\colorbox{black}{\color{white}\textsc{Propriété}}},
+    after title={\hfill\colorbox{color_darkgray}{\color{white}\textsc{Propriété}}},
     title=\color{black}#1}
 
 \newtcolorbox{theoreme}[1]{
-    breakable,
+    %breakable,
     colback=black!4,
     colframe=black!4,
     fonttitle=\bfseries,
