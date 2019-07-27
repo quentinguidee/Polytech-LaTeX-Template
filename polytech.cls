@@ -11,6 +11,7 @@
 %% Fonts
 
 \RequirePackage{amsmath,amsfonts}
+\RequirePackage{mathrsfs}
 \RequirePackage{fontspec}
 \RequirePackage{tcolorbox, xcolor, color}
 \tcbuselibrary{breakable}
@@ -144,7 +145,7 @@
     colframe=black!4,
     fonttitle=\bfseries,
     sharp corners=all,
-    toptitle=1mm,
+    toptitle=2mm,
     bottomtitle=1mm,
     boxrule=0mm,
     %bottomrule=.25mm,

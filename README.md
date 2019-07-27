@@ -21,4 +21,5 @@ To change the main color
 
 ## Screenshot
 
-![screenshot](https://github.com/quentinguidee/Polytech-LaTeX-Template/blob/master/imgs/exemplecomplet.png)
+![screenshot1](https://github.com/quentinguidee/Polytech-LaTeX-Template/blob/master/imgs/exemple1.png)
+![screenshot2](https://github.com/quentinguidee/Polytech-LaTeX-Template/blob/master/imgs/exemple2.png)
