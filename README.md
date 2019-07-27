@@ -19,7 +19,7 @@ To change the main color
 
 ![colors](https://github.com/quentinguidee/Polytech-LaTeX-Template/blob/master/imgs/colors-.png)
 
-## Screenshot
+## Screenshots
 
 ![screenshot1](https://github.com/quentinguidee/Polytech-LaTeX-Template/blob/master/imgs/exemple1.png)
 ![screenshot2](https://github.com/quentinguidee/Polytech-LaTeX-Template/blob/master/imgs/exemple2.png)
