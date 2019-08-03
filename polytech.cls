@@ -12,6 +12,7 @@
 
 \RequirePackage{amsmath,amsfonts}
 \RequirePackage{mathrsfs}
+\RequirePackage{wasysym}
 \RequirePackage{fontspec}
 \RequirePackage{tcolorbox, xcolor, color}
 \tcbuselibrary{breakable}
@@ -171,6 +172,39 @@
     },
     before skip=4mm,
     after skip=4mm}
+    
+    \newtcolorbox{subtbox*}{
+        %breakable,
+        colback=black!8,
+        colbacktitle=black!8,
+        colframe=black!8,
+        fonttitle=\bfseries,
+        sharp corners=all,
+        toptitle=2mm,
+        bottomtitle=1mm,
+        boxrule=0mm,
+        subtitle style={
+            %colback=black!7
+        },
+        before skip=4mm,
+        after skip=4mm}
+    
+    \newtcolorbox{subtbox}[1]{
+        %breakable,
+        colback=black!8,
+        colbacktitle=black!8,
+        colframe=black!8,
+        fonttitle=\bfseries,
+        sharp corners=all,
+        toptitle=2mm,
+        bottomtitle=1mm,
+        boxrule=0mm,
+        subtitle style={
+            %colback=black!7
+        },
+        before skip=4mm,
+        after skip=4mm,
+        title=\color{black}#1}
 
 \newtcolorbox{remarque}{
     %breakable,
