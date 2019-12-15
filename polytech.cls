@@ -17,7 +17,10 @@
 \RequirePackage{tcolorbox, xcolor, color}
 \tcbuselibrary{breakable}
 
-\newfontfamily{\serialfont}{Jaapokki}
+\newfontfamily{\serialfont}{Jaapokki}[
+    Extension=.otf,
+    UprightFont=*-Regular
+  ]
 
 %\RequirePackage{textcomp}
 %\RequirePackage{lmodern}
@@ -42,6 +45,7 @@
 \definecolor{color_orange}{HTML}{FF9D75}
 \definecolor{color_yellow}{HTML}{FFBD78}
 \definecolor{color_green}{HTML}{B6C783}
+\definecolor{color_darkgreen}{HTML}{7DB370}
 \definecolor{color_teal}{HTML}{5DA38F}
 \definecolor{color_blue}{HTML}{3399CC}
 \definecolor{color_purple}{HTML}{BE6BAD}
@@ -49,6 +53,22 @@
 \definecolor{color_lightgray}{HTML}{B1B1B1}
 \definecolor{color_darkgray}{HTML}{5A5B5C}
 
+
+
+
+
+
+\RequirePackage{cancel}
+
+\RequirePackage{lscape}
+
+\RequirePackage{booktabs}
+
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\RequirePackage{tabularx}
+\RequirePackage{longtable}
+\RequirePackage{tabu}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
 
 
@@ -63,6 +83,8 @@
 
 %% Drawing
 \RequirePackage{tikz}
+
+\RequirePackage[american resistor, european voltage, european current, american inductor]{circuitikz}
 
 
 %% Table of contents
@@ -96,7 +118,7 @@
     \thispagestyle{empty}
     {\fontsize{20}{60}\serialfont\selectfont \the\course \par }
     \vspace{0.7cm}
-    
+
     \begin{hyphenrules}{nohyphenation}
     {\fontsize{60}{20}\serialfont\selectfont \color{\the\maincolor}{\@title} \par }
     \end{hyphenrules}
@@ -141,7 +163,7 @@
 %\linespread{1.5}
 
 \newtcolorbox{exemple}{
-    breakable,
+    %breakable,
     colback=black!4,
     colframe=black!4,
     fonttitle=\bfseries,
@@ -159,8 +181,8 @@
 
 \newtcolorbox{tbox}{
     %breakable,
-    colback=black!4,
-    colframe=black!4,
+    colback=black!1,
+    colframe=black!1,
     fonttitle=\bfseries,
     sharp corners=all,
     toptitle=1mm,
@@ -172,8 +194,25 @@
     },
     before skip=4mm,
     after skip=4mm}
-    
-    \newtcolorbox{subtbox*}{
+
+\newtcolorbox{tbox*}[1]{
+    %breakable,
+    colback=black!1,
+    colframe=black!1,
+    fonttitle=\bfseries,
+    sharp corners=all,
+    toptitle=2mm,
+    bottomtitle=1mm,
+    boxrule=0mm,
+    %bottomrule=.25mm,
+    subtitle style={
+        colback=black!7
+    },
+    before skip=4mm,
+    after skip=4mm,
+    title=\color{black}#1}
+
+    \newtcolorbox{subtbox}{
         %breakable,
         colback=black!8,
         colbacktitle=black!8,
@@ -188,8 +227,8 @@
         },
         before skip=4mm,
         after skip=4mm}
-    
-    \newtcolorbox{subtbox}[1]{
+
+    \newtcolorbox{subtbox*}[1]{
         %breakable,
         colback=black!8,
         colbacktitle=black!8,
@@ -269,6 +308,51 @@
     before skip=4mm,
     after skip=4mm,
     after title={\hfill\colorbox{color_teal}{\color{white}\textsc{Théorème}}},
+    title=\color{black}#1}
+
+\newtcolorbox{hypotheses}{
+    %breakable,
+    colback=black!4,
+    colframe=black!4,
+    fonttitle=\bfseries,
+    sharp corners=all,
+    toptitle=1mm,
+    %bottomtitle=1mm,
+    boxrule=0mm,
+    %bottomrule=.25mm,
+    before skip=4mm,
+    %after skip=4mm,
+    before title={\colorbox{color_darkgreen}{\color{white}\textsc{Hypothèse(s)}}},
+    title=\color{black} }
+
+\newtcolorbox{retenir}[1]{
+    %breakable,
+    colback=black!4,
+    colframe=black!4,
+    fonttitle=\bfseries,
+    sharp corners=all,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    boxrule=0mm,
+    %bottomrule=.25mm,
+    before skip=4mm,
+    after skip=4mm,
+    after title={\hfill\colorbox{black!4}{\LARGE\color{color_red}$\heartsuit$}},
+    title=\color{black}#1}
+
+\newtcolorbox{composant}[1]{
+    %breakable,
+    colback=black!4,
+    colframe=black!4,
+    fonttitle=\bfseries,
+    sharp corners=all,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    boxrule=0mm,
+    %bottomrule=.25mm,
+    before skip=4mm,
+    after skip=4mm,
+    after title={\hfill\colorbox{color_yellow}{\color{white}\textsc{Composant}}},
     title=\color{black}#1}
 
 % Color Box
