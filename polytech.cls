@@ -1,15 +1,31 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{polytech}[ULB Polytechnique Template]
 
-%\PassOptionsToClass{12pt}{book}
 \LoadClass{book}
 
-%\RequirePackage[utf8]{inputenc}
+
+%%%%%%%%%%%%%%%%%%
+%%%  Packages  %%%
+%%%%%%%%%%%%%%%%%%
 \RequirePackage[T1]{fontenc}
 \RequirePackage[french]{babel}
+\RequirePackage{cancel}
+\RequirePackage{lscape}
+\RequirePackage{booktabs}
+\RequirePackage{lmodern}
+\RequirePackage{newpxtext, textcomp, eulerpx}
 
-%% Fonts
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\RequirePackage{tabularx}
+\RequirePackage{longtable}
+\RequirePackage{tabu}
+\RequirePackage{ulem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
+
+%%%%%%%%%%%%%%%
+%%%  Fonts  %%%
+%%%%%%%%%%%%%%%
 \RequirePackage{amsmath,amsfonts}
 \RequirePackage{mathrsfs}
 \RequirePackage{wasysym}
@@ -18,29 +34,15 @@
 \tcbuselibrary{breakable}
 
 \newfontfamily{\serialfont}{Jaapokki}[
-    Extension=.otf,
+    %Extension=.otf,
     UprightFont=*-Regular
-  ]
-
-%\RequirePackage{textcomp}
-%\RequirePackage{lmodern}
-%\RequirePackage{tgtermes}
-%\RequirePackage{kmath}
-%\renewcommand{\familydefault}{\sfdefault}
-% \usepackage{newpxmath}
-% \usepackage{fontspec}
-
-% \setmainfont{TeX Gyre Pagella}
-
-\RequirePackage{lmodern}
-\RequirePackage{newpxtext, textcomp, eulerpx}
+]
 
 
+%%%%%%%%%%%%%%%%
+%%%  Colors  %%%
+%%%%%%%%%%%%%%%%
 
-%\newcommand\upi{\symup{i}}
-%\newcommand\upe{\symup{e}}
-
-%% Colors
 \definecolor{color_red}{HTML}{FF6F5F}
 \definecolor{color_orange}{HTML}{FF9D75}
 \definecolor{color_yellow}{HTML}{FFBD78}
@@ -54,40 +56,28 @@
 \definecolor{color_darkgray}{HTML}{5A5B5C}
 
 
-
-
-
-
-\RequirePackage{cancel}
-
-\RequirePackage{lscape}
-
-\RequirePackage{booktabs}
-
-\newcommand{\tabitem}{~~\llap{\textbullet}~~}
-\RequirePackage{tabularx}
-\RequirePackage{longtable}
-\RequirePackage{tabu}
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-
-
-
-
-%% Margins
+%%%%%%%%%%%%%%%%%
+%%%  Margins  %%%
+%%%%%%%%%%%%%%%%%
 \RequirePackage[a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
 
 
-%% Chapters
+%%%%%%%%%%%%%%%%%%
+%%%  Chapters  %%%
+%%%%%%%%%%%%%%%%%%
 \RequirePackage{titlesec}
 
 
-%% Drawing
+%%%%%%%%%%%%%%%%%%
+%%%  Drawings  %%%
+%%%%%%%%%%%%%%%%%%
 \RequirePackage{tikz}
-
 \RequirePackage[american resistor, european voltage, european current, american inductor]{circuitikz}
 
 
-%% Table of contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  Table of content  %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{hyperref}
 \hypersetup{
     colorlinks,
@@ -98,13 +88,16 @@
 }
 
 
-%% Chemical
+%%%%%%%%%%%%%%%%%%
+%%%  Chemical  %%%
+%%%%%%%%%%%%%%%%%%
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{chemfig}
 
 
-
-
+%%%%%%%%%%%%%%%%
+%%%  Tokens  %%%
+%%%%%%%%%%%%%%%%
 \newtoks\course
 \newtoks\prof
 \newtoks\maincolor
@@ -143,8 +136,9 @@
 
 
 
-% Boxes
-
+%%%%%%%%%%%%%%%
+%%%  Boxes  %%%
+%%%%%%%%%%%%%%%
 \newtcolorbox{definition}[1]{
     breakable,
     colback=black!4,
@@ -160,8 +154,6 @@
     after title={\hfill\colorbox{color_red}{\color{white}\textsc{Définition}}},
     title=\color{black}#1}
 
-%\linespread{1.5}
-
 \newtcolorbox{exemple}{
     %breakable,
     colback=black!4,
@@ -171,7 +163,6 @@
     toptitle=2mm,
     bottomtitle=1mm,
     boxrule=0mm,
-    %bottomrule=.25mm,
     subtitle style={
         colback=black!7
     },
@@ -188,7 +179,6 @@
     toptitle=1mm,
     bottomtitle=1mm,
     boxrule=0mm,
-    %bottomrule=.25mm,
     subtitle style={
         colback=black!7
     },
@@ -204,7 +194,6 @@
     toptitle=2mm,
     bottomtitle=1mm,
     boxrule=0mm,
-    %bottomrule=.25mm,
     subtitle style={
         colback=black!7
     },
@@ -254,7 +243,6 @@
     toptitle=2mm,
     bottomtitle=1mm,
     boxrule=0mm,
-    %bottomrule=.25mm,
     subtitle style={
         colback=black!7
     },
@@ -271,7 +259,6 @@
     toptitle=2mm,
     bottomtitle=1mm,
     boxrule=0mm,
-    %bottomrule=.25mm,
     subtitle style={
         colback=black!7
     },
@@ -289,7 +276,6 @@
     toptitle=1mm,
     bottomtitle=1mm,
     boxrule=0mm,
-    %bottomrule=.25mm,
     before skip=4mm,
     after skip=4mm,
     after title={\hfill\colorbox{color_darkgray}{\color{white}\textsc{Propriété}}},
@@ -304,7 +290,6 @@
     toptitle=1mm,
     bottomtitle=1mm,
     boxrule=0mm,
-    %bottomrule=.25mm,
     before skip=4mm,
     after skip=4mm,
     after title={\hfill\colorbox{color_teal}{\color{white}\textsc{Théorème}}},
@@ -317,11 +302,8 @@
     fonttitle=\bfseries,
     sharp corners=all,
     toptitle=1mm,
-    %bottomtitle=1mm,
     boxrule=0mm,
-    %bottomrule=.25mm,
     before skip=4mm,
-    %after skip=4mm,
     before title={\colorbox{color_darkgreen}{\color{white}\textsc{Hypothèse(s)}}},
     title=\color{black} }
 
@@ -334,7 +316,6 @@
     toptitle=1mm,
     bottomtitle=1mm,
     boxrule=0mm,
-    %bottomrule=.25mm,
     before skip=4mm,
     after skip=4mm,
     after title={\hfill\colorbox{black!4}{\LARGE\color{color_red}$\heartsuit$}},
@@ -349,12 +330,14 @@
     toptitle=1mm,
     bottomtitle=1mm,
     boxrule=0mm,
-    %bottomrule=.25mm,
     before skip=4mm,
     after skip=4mm,
     after title={\hfill\colorbox{color_yellow}{\color{white}\textsc{Composant}}},
     title=\color{black}#1}
 
-% Color Box
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%  Colored boxes  %%%
+%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{multicol}
 \newcommand{\cbox}[1]{\raisebox{\depth}{\fcolorbox{black}{#1}{\null}}}
